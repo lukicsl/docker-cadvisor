@@ -4,7 +4,7 @@ ARG VERSION=master
 WORKDIR ${GOPATH}/src/github.com/google
 RUN git clone --branch ${VERSION} https://github.com/google/cadvisor.git
 WORKDIR ${GOPATH}/src/github.com/google/cadvisor
-RUN xgo --targets=linux/386,linux/amd64,linux/arm-5,linux/arm-6,linux/arm-7,linux/arm64 .
+RUN xgo --targets=linux/arm-7 .
 
 FROM alpine
 
