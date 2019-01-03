@@ -47,7 +47,7 @@ base:
 
 push:
 	@docker login -u $(DOCKER_USER) -p $(DOCKER_PASS)
-	@$(foreach arch,$(ARCHITECTURES), docker push $(REPO):linux-$(arch)-$(TAG);)
+	@$(foreach arch,$(ARCHITECTURES), echo "docker push $(REPO):linux-$(arch)-$(TAG)" ;docker push $(REPO):linux-$(arch)-$(TAG);)
 	@docker logout
 
 manifest:
