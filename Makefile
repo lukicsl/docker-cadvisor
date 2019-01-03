@@ -46,9 +46,9 @@ base:
 	fi
 
 push:
-	@docker login -u $(DOCKER_USER) -p $(DOCKER_PASS)
-	@$(foreach arch,$(ARCHITECTURES), echo "docker push $(REPO):linux-$(arch)-$(TAG)";)
-	@docker logout
+#	@docker login -u $(DOCKER_USER) -p $(DOCKER_PASS)
+	@$(foreach arch,$(ARCHITECTURES), docker push $(REPO):linux-$(arch)-$(TAG);)
+#	@docker logout
 
 manifest:
 	@wget -O docker https://6582-88013053-gh.circle-artifacts.com/1/work/build/docker-linux-amd64
