@@ -1,4 +1,5 @@
-ARCHITECTURES = amd64 i386 arm32v5 arm32v7 arm64v8
+#ARCHITECTURES = amd64 i386 arm32v5 arm32v7 arm64v8
+ARCHITECTURES = arm32v7 
 IMAGE_TARGET = debian:buster-slim
 BUILD_BASE = base
 MULTIARCH = multiarch/qemu-user-static:register
