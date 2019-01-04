@@ -1,5 +1,5 @@
 FROM karalabe/xgo-latest AS build
-ARG VERSION=release-v0.32
+ARG VERSION=release-v0.31
 
 WORKDIR ${GOPATH}/src/github.com/google
 RUN git clone --branch ${VERSION} https://github.com/google/cadvisor.git
